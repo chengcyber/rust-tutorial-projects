@@ -12,6 +12,7 @@ fn main() {
 
   countdown_for();
 
+  enumerate_for();
 }
 
 fn basic_branch() {
@@ -88,4 +89,20 @@ fn countdown_for() {
   }
 
   println!("LIFTOFF!!!");
+}
+
+fn enumerate_for() {
+
+  let s = "hello world";
+
+  let bytes = s.as_bytes();
+
+  for (i, &item) in bytes.iter().enumerate() {
+    if (item == b' ') {
+      return i;
+    }
+  }
+
+  s.len()
+
 }
