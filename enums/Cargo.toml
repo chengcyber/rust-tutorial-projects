@@ -1,0 +1,7 @@
+[package]
+name = "enums"
+version = "0.1.0"
+authors = ["Cheng <liucheng.tech@outlook.com>"]
+edition = "2018"
+
+[dependencies]
