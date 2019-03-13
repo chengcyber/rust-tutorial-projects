@@ -1,0 +1,11 @@
+#+TITLE: minigrep
+
+* Usage
+
+#+BEGIN_SRC bash
+cargo run to ../poem.txt
+#+END_SRC
+
+#+BEGIN_SRC bash
+CASE_INSENSITIVE=1 cargo run to ../poem.txt
+#+END_SRC
