@@ -12,7 +12,7 @@ fn main() {
 
     println!("listening at {}", listener.local_addr().unwrap());
 
-    for stream in listener.incoming() {
+    for stream in listener.incoming().take(2) {
         let stream = stream.unwrap();
 
         pool.execute(|| {
@@ -20,6 +20,7 @@ fn main() {
         });
     }
 
+    println!("Shutting down server.")
 }
 
 fn handle_connection(mut stream: TcpStream) {
